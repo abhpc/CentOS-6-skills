@@ -38,4 +38,46 @@ OFED Distribution Software Installation Menu
 
 Select Option [1-4]:3
 
-Wait for several minutes.
+================================================================================
+After several minutes, the build process is finished:
+
+The default IPoIB interface configuration is based on DHCP.
+Note that a special patch for DHCP is required for supporting IPoIB.
+The patch is available under docs/dhcp
+If you do not have DHCP, you must change this configuration in the following steps.
+
+Do you want to configure ib0? [Y/n]:n
+
+Do you want to configure ib1? [Y/n]:n
+IPoIB interfaces configured successfully
+Press any key to continue ...
+
+OFED Distribution Software Installation Menu
+
+   1) View OFED Installation Guide
+   2) Install OFED Software
+   3) Show Installed Software
+   4) Configure IPoIB
+   5) Uninstall OFED Software
+
+   Q) Exit
+
+Select Option [1-5]:q
+================================================================================
+
+5. Set the ifcfg-ib0. An example for the configuration of ib0:
+# cat /etc/sysconfig/network-scripts/ifcfg-ib0
+DEVICE=ib0
+TYPE='InfiniBand'
+BOOTPROTO=static
+IPADDR=192.168.1.1
+NETMASK=255.255.255.0
+ONBOOT=yes
+CONNECTED_MODE=yes
+MTU=65520
+
+6. Start openibd and opensmd when startup:
+# chkconfig openibd on
+# chkconfig opensmd on
+
+7. Reboot your system.
