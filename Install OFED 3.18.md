@@ -27,7 +27,7 @@ OFED 3.18 is compatible with kernel-2.6.32-504.el6.x86_64.
 
       Q) Exit
 
-    Select Option [1-5]:**2**
+    Select Option [1-5]:2
 
     OFED Distribution Software Installation Menu
 
@@ -38,7 +38,7 @@ OFED 3.18 is compatible with kernel-2.6.32-504.el6.x86_64.
 
       Q) Exit
 
-    Select Option [1-4]:**3**
+    Select Option [1-4]:3
 
 After several minutes, the build process is finished:
 
@@ -49,7 +49,7 @@ After several minutes, the build process is finished:
 
     Do you want to configure ib0? [Y/n]:n
 
-    Do you want to configure ib1? [Y/n]:**n**
+    Do you want to configure ib1? [Y/n]:n
     IPoIB interfaces configured successfully
     Press any key to continue ...
 
@@ -63,21 +63,21 @@ After several minutes, the build process is finished:
 
       Q) Exit
 
-      Select Option [1-5]:**q**
+      Select Option [1-5]:q
 
-5. Set the ifcfg-ib0. An example for the configuration of ib0:
-# cat /etc/sysconfig/network-scripts/ifcfg-ib0
-DEVICE=ib0
-TYPE='InfiniBand'
-BOOTPROTO=static
-IPADDR=192.168.1.1
-NETMASK=255.255.255.0
-ONBOOT=yes
-CONNECTED_MODE=yes
-MTU=65520
+### 5. Set the ifcfg-ib0. An example for the configuration of ib0:
+    # cat /etc/sysconfig/network-scripts/ifcfg-ib0
+    DEVICE=ib0
+    TYPE='InfiniBand'
+    BOOTPROTO=static
+    IPADDR=192.168.1.1
+    NETMASK=255.255.255.0
+    ONBOOT=yes
+    CONNECTED_MODE=yes
+    MTU=65520
 
-6. Start openibd and opensmd when startup:
-# chkconfig openibd on
-# chkconfig opensmd on
+### 6. Start openibd and opensmd when startup:
+    # chkconfig openibd on
+    # chkconfig opensmd on
 
-7. Reboot your system.
+## 7. Reboot your system.
