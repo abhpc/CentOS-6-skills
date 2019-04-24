@@ -26,4 +26,14 @@
     baseurl=https://downloads.whamcloud.com/public/lustre/lustre-2.7.0/el6/client/
     gpgcheck=0
 
-### 4. 
+### 4. Upgrade e2fsprogs:
+
+    # yum upgrade -y e2fsprogs
+
+### 5. Install lustre packages:
+
+    # yum install lustre-tests -y
+
+This process may be very slow, you should wait for several minutes.
+
+### 6. 
