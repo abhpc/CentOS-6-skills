@@ -24,31 +24,35 @@
     # service iptables save
     # vi /etc/selinux/config
 
-把红色部分设置为disabled：
+把SELINUX设置为disabled：
 
     # This file controls the state of SELinux on the system.
     # SELINUX= can take one of these three values:
     #     enforcing - SELinux security policy is enforced.
     #     permissive - SELinux prints warnings instead of enforcing.
     #     disabled - No SELinux policy is loaded.
-    SELINUX=<font color=red>disabled</font>
+    SELINUX=disabled
     # SELINUXTYPE= can take one of these two values:
     #     targeted - Targeted processes are protected,
     #     mls - Multi Level Security protection.
     SELINUXTYPE=targeted
 
 然后临时关闭selinux:
-# setenforce 0
+    # setenforce 0
 
-6.安装必要的package：
-# yum install -y cmake gcc glibc-devel libnl3-devel bison flex zlib-devel libstdc++-devel gcc-c++ tcl tcl-devel tk libudev-devel rpm-build glib2-devel libtool libnl-devel
+### 6.安装必要的package：
+    # yum install -y cmake gcc glibc-devel libnl3-devel bison flex zlib-devel \
+                      libstdc++-devel gcc-c++ tcl tcl-devel tk libudev-devel \
+                      rpm-build glib2-devel libtool libnl-devel
 
-7.换kernel到504：
-# cd
-# scp -r root@192.168.26.100:/root/OFED-3.18-EL6  ./
-# cd OFED-3.18-EL6
-# cd kernel-2.6.32-504.el6.x86_64
-# rpm -Uvh *.rpm --force
+### 7.换kernel到504：
+
+    # cd
+    # scp -r root@192.168.26.100:/root/OFED-3.18-EL6  ./
+    # cd OFED-3.18-EL6
+    # cd kernel-2.6.32-504.el6.x86_64
+    # rpm -Uvh *.rpm --force
+
 然后重启服务器：
 # reboot
 重启后：
