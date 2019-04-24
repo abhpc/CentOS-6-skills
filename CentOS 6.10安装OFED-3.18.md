@@ -52,7 +52,7 @@
     # scp -r root@192.168.26.100:/root/OFED-3.18-EL6  ./
     # cd OFED-3.18-EL6
     # cd kernel-2.6.32-504.el6.x86_64
-    # rpm -Uvh \*.rpm --force
+    # rpm -Uvh *.rpm --force
 
 然后重启服务器：
 
