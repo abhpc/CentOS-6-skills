@@ -2,22 +2,28 @@
 
 小技巧：Xshell的粘贴快捷键是Shift+Insert，复制快捷键是Ctrl+Insert，多用Tab键补全
 ### 1.安装epel：
-  # yum install -y epel-release
 
-2.安装bash-comp:
-# yum install -y bash-comp*
+    # yum install -y epel-release
 
-3.换源：
-# cd /etc/yum.repos.d/
-# scp root@192.168.26.100:/etc/yum.repos.d/*  ./
+### 2.安装bash-comp:
 
-4.系统更新：
-# yum update -y
+    # yum install -y bash-comp*
 
-5.关闭Selinux和防火墙：
-# iptables -F
-# service iptables save
-# vi /etc/selinux/config
+### 3.换源：
+
+    # cd /etc/yum.repos.d/
+    # scp root@192.168.26.100:/etc/yum.repos.d/*  ./
+
+### 4.系统更新：
+
+    # yum update -y
+
+### 5.关闭Selinux和防火墙：
+
+    # iptables -F
+    # service iptables save
+    # vi /etc/selinux/config
+
 把红色部分设置为disabled：
 # This file controls the state of SELinux on the system.
 # SELINUX= can take one of these three values:
