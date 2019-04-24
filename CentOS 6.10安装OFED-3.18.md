@@ -38,6 +38,7 @@
     SELINUXTYPE=targeted
 
 然后临时关闭selinux:
+
     # setenforce 0
 
 ### 6.安装必要的package：
@@ -54,9 +55,13 @@
     # rpm -Uvh \*.rpm --force
 
 然后重启服务器：
+
     # reboot
+
 重启后：
+
     # uname -a
+
 检查kernel是否降为504。
 
 ### 8.编译安装OFED：
