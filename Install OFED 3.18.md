@@ -2,7 +2,7 @@ OFED 3.18 is compatible with kernel-2.6.32-504.el6.x86_64.
 
 
 
-## 1. Install some neccessary packages:
+### 1. Install some neccessary packages:
 
     # yum install -y cmake gcc glibc-devel libnl3-devel bison flex zlib-devel \
                  libstdc++-devel gcc-c++ tcl tcl-devel tk libudev-devel \
