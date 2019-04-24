@@ -151,6 +151,7 @@ ifcfg-ib1内容：
     SLAVE=yes
 
 重启服务器
+
     # reboot
 
 ### 11.配置hosts文件
