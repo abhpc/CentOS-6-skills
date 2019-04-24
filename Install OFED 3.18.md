@@ -10,35 +10,35 @@ OFED 3.18 is compatible with kernel-2.6.32-504.el6.x86_64.
 ### 2. Dowloand OFED-3.18:
     # wget https://www.openfabrics.org/downloads/OFED/ofed-3.18/OFED-3.18.tgz
 
-3. Unpack OFED-3.18:
-# tar -vxf OFED-3.18.tgz
+### 3. Unpack OFED-3.18:
+    # tar -vxf OFED-3.18.tgz
 
-4. Start installation:
-# cd OFED-3.18
-# ./install.pl
+### 4. Start installation:
+    # cd OFED-3.18
+    # ./install.pl
 
-OFED Distribution Software Installation Menu
+    OFED Distribution Software Installation Menu
 
-   1) View OFED Installation Guide
-   2) Install OFED Software
-   3) Show Installed Software
-   4) Configure IPoIB
-   5) Uninstall OFED Software
+      1) View OFED Installation Guide
+      2) Install OFED Software
+      3) Show Installed Software
+      4) Configure IPoIB
+      5) Uninstall OFED Software
 
-   Q) Exit
+      Q) Exit
 
-Select Option [1-5]:2
+    Select Option [1-5]:2
 
-OFED Distribution Software Installation Menu
+    OFED Distribution Software Installation Menu
 
-   1) Basic (OFED modules and basic user level libraries)
-   2) HPC (OFED modules and libraries, MPI and diagnostic tools)
-   3) All packages (all of Basic, HPC)
-   4) Customize
+      1) Basic (OFED modules and basic user level libraries)
+      2) HPC (OFED modules and libraries, MPI and diagnostic tools)
+      3) All packages (all of Basic, HPC)
+      4) Customize
 
-   Q) Exit
+      Q) Exit
 
-Select Option [1-4]:3
+    Select Option [1-4]:3
 
 ================================================================================
 After several minutes, the build process is finished:
