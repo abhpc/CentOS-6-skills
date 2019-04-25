@@ -54,3 +54,32 @@ Create file /etc/sysconfig/modules/lnet.modules:
 ### 7. Reboot and test your lustre system:
 
     # reboot
+
+### 8. Make lustre file system:
+On Disk01, MGS partition:
+
+    # mkfs.lustre --fsname=amefs --mgs --mdt --index=0 --servicenode=10.10.10.11@tcp0 --reformat /dev/sdb1
+
+OST partition:
+
+    # mkfs.lustre --fsname=amefs --mgsnode=10.10.10.11@tcp0 --servicenode=10.10.10.11@tcp0 --ost --reformat --index=1 /dev/sdb2
+
+On Disk02, OST partition:
+
+    # mkfs.lustre --fsname=amefs --mgsnode=10.10.10.11@tcp0 --servicenode=10.10.10.12@tcp0 --ost --reformat --index=2 /dev/sdb
+
+On Disk03, OST partition:
+
+    # mkfs.lustre --fsname=amefs --mgsnode=10.10.10.11@tcp0 --servicenode=10.10.10.13@tcp0 --ost --reformat --index=3 /dev/sdb
+
+On Disk04, OST partition:
+
+    # mkfs.lustre --fsname=amefs --mgsnode=10.10.10.11@tcp0 --servicenode=10.10.10.14@tcp0 --ost --reformat --index=4 /dev/sdb
+
+On Disk05, OST partition:
+
+    # mkfs.lustre --fsname=amefs --mgsnode=10.10.10.11@tcp0 --servicenode=10.10.10.15@tcp0 --ost --reformat --index=5 /dev/sdb
+
+On Disk06, OST partition:
+
+    # mkfs.lustre --fsname=amefs --mgsnode=10.10.10.11@tcp0 --servicenode=10.10.10.16@tcp0 --ost --reformat --index=6 /dev/sdb
