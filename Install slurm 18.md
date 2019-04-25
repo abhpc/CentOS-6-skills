@@ -56,4 +56,6 @@ http://MASTER_NODE_IP/phpmyadmin.
     # tar -vxf slurm-18.08.7.tar.bz2
     # cd slurm-18.08.7/
     # mkdir /opt/slurm
-    # ./configure --
+    # ./configure --prefix=/opt/slurm --sysconfdir=/opt/slurm/etc
+    # make -j 10
+    #
