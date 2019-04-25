@@ -6,7 +6,7 @@
 
 ### 2. Install ZFS:
 
-    yum localinstall -y http://download.zfsonlinux.org/epel/zfs-release.el6.noarch.rpm
+    # yum localinstall -y http://download.zfsonlinux.org/epel/zfs-release.el6.noarch.rpm
 
 ### 3. Configure the lustre.repo:
 
