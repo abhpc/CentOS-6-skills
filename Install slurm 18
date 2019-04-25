@@ -1,5 +1,0 @@
-1. Install munge
-# yum install munge munge-devel munge-libs
-# create-munge-key
-# chkconfig munge on
-# service munge start
