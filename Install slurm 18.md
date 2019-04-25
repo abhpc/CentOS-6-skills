@@ -45,8 +45,10 @@ Install phpmyadmin for better management.
 
     # yum install -y httpd phpmyadmin php
     # cd /var/www/html/ && ln -s /usr/share/phpMyAdmin/ phpmyadmin
-    # 
 
+Change the allow IP in file vi /etc/httpd/conf.d/phpMyAdmin.conf, and then
+create a user and mysql database for slurm via visiting
+http://MASTER_NODE_IP/phpmyadmin.
 
 ### 3. Download and compile the latest Slurm (v18.0).
 
