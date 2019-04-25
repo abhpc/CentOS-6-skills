@@ -58,6 +58,9 @@ http://MASTER_NODE_IP/phpmyadmin.
     # mkdir /opt/slurm
     # ./configure --prefix=/opt/slurm --sysconfdir=/opt/slurm/etc
     # make -j 10 && make install
+    # cd etc
+    # cp init.d.slurm /etc/init.d/slurm && chmod +x /etc/init.d/slurm
+    # cp init.d.slurmdbd /etc/init.d/slurmdbd && chmod +x /etc/init.d/slurmdbd
     # cd /opt/slurm && mkdir etc log state
     # chown -Rf admin:admin state/ && chmod -Rf 777 log
 
@@ -66,3 +69,8 @@ It is quite complex to give general configuration files. If you do not know how
 to write a slurm.conf file, [try the slurm.conf generator.](https://slurm.schedmd.com/configurator.html)
 
 ### 5. Start the slurm and slurmdbd service.
+
+    # chkconfig slurm on
+    # chkconfig slurmdbd on
+    # service slurm start
+    # service slurmdbd start
