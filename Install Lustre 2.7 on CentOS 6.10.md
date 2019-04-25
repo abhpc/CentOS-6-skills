@@ -43,10 +43,12 @@ Create the following file /etc/modprobe.d/lnet.conf according to your networks:
 
 Create file /etc/sysconfig/modules/lnet.modules:
 
+    cat << EOF > /etc/sysconfig/modules/lnet.modules
     #!/bin/sh
 
     if [ ! -c /dev/lnet ] ; then
       exec /sbin/modprobe lnet >/dev/null 2>&1
     fi
+    EOF
 
 ### 7.
