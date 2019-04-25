@@ -51,4 +51,6 @@ Create file /etc/sysconfig/modules/lnet.modules:
     fi
     EOF
 
-### 7.
+### 7. Reboot and test your lustre system:
+
+    # reboot
