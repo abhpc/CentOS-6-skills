@@ -55,6 +55,13 @@ Create file /etc/sysconfig/modules/lnet.modules:
 
     # reboot
 
+### 8. Recompile the OFED packages since the kernel has been changed:
+
+    # wget https://downloads.whamcloud.com/public/lustre/lustre-2.7.0/el6/server/RPMS/x86_64/kernel-devel-2.6.32-504.8.1.el6_lustre.x86_64.rpm
+    # rpm -Uvh kernel-devel-2.6.32-504.8.1.el6_lustre.x86_64.rpm
+
+[Howto recompile OFED packages.](https://github.com/abhpc/CentOS-6-skills/blob/master/CentOS%206.10%E5%AE%89%E8%A3%85OFED-3.18.md)
+
 ### 8. Make lustre file system:
 On Disk01, MGS partition:
 
