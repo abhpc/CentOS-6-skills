@@ -39,7 +39,7 @@ This process may be very slow, you should wait for several minutes.
 ### 6. Set the modules
 Create the following file /etc/modprobe.d/lnet.conf according to your networks:
 
-    options lnet networks=tcp0(bond0)
+    echo "options lnet networks=tcp0(bond0)" > /etc/modprobe.d/lnet.conf
 
 Create file /etc/sysconfig/modules/lnet.modules:
 
