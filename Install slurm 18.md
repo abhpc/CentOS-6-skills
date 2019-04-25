@@ -74,3 +74,14 @@ to write a slurm.conf file, [try the slurm.conf generator.](https://slurm.schedm
     # chkconfig slurmdbd on
     # service slurm start
     # service slurmdbd start
+
+### 6. Add environmental variables.
+Add /opt/slurm/bin and /opt/slurm/sbin to PATH:
+
+    # export PATH="$PATH:/opt/slurm/bin:/opt/slurm/sbin"
+
+Add /opt/slurm/lib/slurm and /opt/slurm/lib to LD_LIBRARY_PATH:
+
+    # export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/opt/slurm/lib/slurm:/opt/slurm/lib"
+
+You can add these two lines above in /etc/bashrc according to your system.
