@@ -9,7 +9,7 @@ Copy the /etc/munge/munge.key to other nodes.
 
 ### 2. Configure the MySQL service in the master node:
 
-    # yum install -y mysql mysql-server
+    # yum install -y mysql mysql-server mysql-devel
 
 Set the root password for MySQL:
 
