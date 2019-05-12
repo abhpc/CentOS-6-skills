@@ -1,6 +1,7 @@
 ### 1. Install munge.
 
-    # apt-get install munge libmunge-dev
+    # apt-get install -y dkms build-essential linux-headers-generic
+    # apt-get install -y munge libmunge-dev
     # create-munge-key
     # systemctl enable munge
     # service munge restart
@@ -24,6 +25,7 @@ http://MASTER_NODE_IP/phpmyadmin.
 
 ### 3. Download and compile the latest Slurm (v18.0).
 
+    # apt-get install libgtk2.0-dev -y
     # wget https://download.schedmd.com/slurm/slurm-18.08.7.tar.bz2
     # tar -vxf slurm-18.08.7.tar.bz2
     # cd slurm-18.08.7/
