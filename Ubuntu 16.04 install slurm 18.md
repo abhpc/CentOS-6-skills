@@ -12,6 +12,7 @@ Copy the /etc/munge/munge.key to other nodes.
 
     # apt-get install -y software-properties-common
     # add-apt-repository 'deb http://archive.ubuntu.com/ubuntu trusty universe'
+    # apt update
     # apt install -y mysql-server-5.6 libmysqld-dev
     # systemctl enable mysql
     # service mysql restart
