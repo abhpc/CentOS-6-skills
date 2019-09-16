@@ -158,3 +158,19 @@ Mount the lustre file system when boot up
 # echo "mount.lustre /dev/sda /amefs-ost6/" >> /etc/rc.local
 # reboot
 ```
+
+#### On client machine
+Install related lustre packages:
+```
+# yum install -y lustre-client kmod-lustre-client
+```
+Add lustre module when bootup:
+```
+# echo 'options lnet networks=tcp0(bond0)' > /etc/modprobe.d/lustre.conf
+# depmod -a
+# modprobe lustre
+```
+Mount the lustre remote files:
+```
+# mount.lustre  10.10.20.11@tcp0:/lufs /home-lufs
+```
