@@ -42,7 +42,7 @@
     # setenforce 0
 
 ### 6.安装必要的package：
-    # yum install -y cmake gcc glibc-devel libnl3-devel bison flex zlib-devel \
+    # yum install -y cmake gcc glibc-devel libnl3-devel bison flex zlib-devel lsof \
                       libstdc++-devel gcc-c++ tcl tcl-devel tk libudev-devel \
                       rpm-build glib2-devel libtool libnl-devel
 
